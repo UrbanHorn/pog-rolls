@@ -1,0 +1,137 @@
+{
+  "players": [
+    {
+      "id": "player-1",
+      "name": "Werd",
+      "balance": 50,
+      "inventory": [],
+      "currentGame": null,
+      "completedGames": [
+        {
+          "id": "da165324-f6bb-4b3a-b25a-d92f5dd30f21",
+          "title": "Portal 2",
+          "hours": 8.5,
+          "points": 850,
+          "imageUrl": "https://howlongtobeat.com/games/Portal2cover.jpg",
+          "rating": 90,
+          "releaseYear": 2011,
+          "elapsedSeconds": 14,
+          "timerRunning": false,
+          "timerStartedAt": null,
+          "startedAt": "2026-07-11T17:29:33.925Z",
+          "result": "dropped",
+          "completedAt": "2026-07-11T19:00:07.409Z"
+        }
+      ]
+    },
+    {
+      "id": "player-2",
+      "name": "Wiki",
+      "balance": 0,
+      "inventory": [],
+      "currentGame": null,
+      "completedGames": []
+    },
+    {
+      "id": "player-3",
+      "name": "Kamatori",
+      "balance": 0,
+      "inventory": [],
+      "currentGame": null,
+      "completedGames": []
+    },
+    {
+      "id": "player-4",
+      "name": "𝓡𝓾𝓫𝔂𝓖𝓾𝓷",
+      "balance": 0,
+      "inventory": [],
+      "currentGame": null,
+      "completedGames": []
+    },
+    {
+      "id": "player-5",
+      "name": "17400",
+      "balance": 0,
+      "inventory": [],
+      "currentGame": null,
+      "completedGames": []
+    }
+  ],
+  "shopItems": [
+    {
+      "id": "fbcb1d67-063c-4d63-bce5-f155b299af1e",
+      "name": "Подсказка",
+      "price": 120
+    },
+    {
+      "id": "fdae757a-0657-411a-b492-8896d5bf09cc",
+      "name": "Переброс кубика",
+      "price": 180
+    },
+    {
+      "id": "0190c47a-5234-4dbd-a81a-4eca04f67574",
+      "name": "Защита от штрафа",
+      "price": 250
+    }
+  ],
+  "slotCost": 100,
+  "prizes": [
+    {
+      "id": "slot-hook",
+      "name": "Хук Пуджа",
+      "weight": 20,
+      "image": "assets/slot-hook.png"
+    },
+    {
+      "id": "slot-money-vacuum",
+      "name": "Деньгасос",
+      "weight": 20,
+      "image": "assets/slot-money-vacuum.png"
+    },
+    {
+      "id": "slot-double-dice",
+      "name": "Двойной кубик",
+      "weight": 20,
+      "image": "assets/slot-double-dice.png"
+    },
+    {
+      "id": "slot-iron-maiden",
+      "name": "Железная дева",
+      "weight": 20,
+      "image": "assets/slot-iron-maiden.png"
+    },
+    {
+      "id": "slot-helping-hand",
+      "name": "Рука помощи",
+      "weight": 20,
+      "image": "assets/slot-helping-hand.png"
+    }
+  ],
+  "log": [
+    {
+      "id": "65bdce34-f1b6-4a66-b730-6f6791c75734",
+      "text": "Werd тратит 50 монет.",
+      "time": "22:09"
+    },
+    {
+      "id": "82fe6208-ccb3-488b-97f8-a8ee6f6c5b78",
+      "text": "Werd получает 50 монет.",
+      "time": "22:09"
+    },
+    {
+      "id": "bc8085d4-91dd-498d-9eaf-855c2e3ff7bc",
+      "text": "Werd получает 50 монет.",
+      "time": "22:09"
+    },
+    {
+      "id": "e40db8b8-cf63-496f-82a8-70e276bb762d",
+      "text": "Werd дропает \"Portal 2\".",
+      "time": "22:00"
+    },
+    {
+      "id": "64f7c099-327a-4169-9b7f-f2fa3640e058",
+      "text": "Werd: текущая игра \"Portal 2\" (8.5 ч., 850 очков).",
+      "time": "20:29"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="treasure-page player-profile-page" data-player-number="2">
+    <main class="app player-page">
+      <section class="profile-top">
+        <div class="profile-identity"><div class="profile-avatar-slot">+</div></div>
+        <div class="profile-center"><h1 id="profileName">Wiki</h1><div class="profile-description-box">Фрик, бомж, филантроп </div></div>
+        <div class="hero-actions"><a class="ghost-button link-button" href="shop.html?player=2">Магазин</a><a class="ghost-button link-button" href="index.html">На главную</a><a class="ghost-button link-button" href="board.html">Игровое поле</a></div>
+      </section>
+      <section id="playerProfile" class="profile-layout">
+        <section class="panel profile-main-block"><div id="profileCompletedGames" class="profile-games-panel"><div class="profile-games-title">Список пройденных игр</div></div><div class="profile-side-panel"><div id="profileCurrentGame" class="profile-side-section current-game-box"><div class="profile-side-title">Текущая игра</div></div><div id="profileGameTimer" class="profile-side-section profile-timer-section"><p class="eyebrow">таймер</p><div id="profileTimerDisplay" class="profile-timer-display">00:00:00</div><div id="profileTimerStatus" class="profile-timer-status">Выберите текущую игру</div><div class="profile-timer-actions"><button id="profileTimerStart" type="button">Старт</button><button id="profileTimerPause" type="button" class="ghost-button">Пауза</button></div></div><div class="profile-side-section"><p class="eyebrow">деньги</p><div id="profileBalance" class="big-balance">0 монет</div></div><div class="profile-side-section"><p class="eyebrow">предметы</p><div id="profileInventory" class="inventory-grid compact-inventory"><div class="inventory-empty">Инвентарь пуст</div></div></div></div></section>
+      </section>
+    </main>
+    <script src="player.js"></script>
+  </body>
+</html>

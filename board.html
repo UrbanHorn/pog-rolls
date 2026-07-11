@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игровое поле</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="board-body">
+    <main class="board-page">
+      <a class="board-back-button" href="index.html">Назад к казне</a>
+      <section class="game-board-panel" aria-label="Карта игры">
+        <div id="boardStage" class="board-stage">
+          <img class="board-map" src="assets/pog_rolls_map_loop.webp" alt="Карта игрового поля" />
+          <canvas id="cellLayer" class="cell-layer" aria-label="Клетки игрового поля"></canvas>
+          <div id="pieceLayer" class="piece-layer" aria-label="Фигурки игроков"></div>
+        </div>
+      </section>
+
+      <div id="cellModal" class="cell-modal" hidden>
+        <div class="cell-modal-card" role="dialog" aria-modal="true" aria-labelledby="cellModalTitle">
+          <button id="closeCellModal" class="cell-modal-close" type="button" aria-label="Закрыть">×</button>
+          <p class="eyebrow">информация</p>
+          <h2 id="cellModalTitle">Клетка</h2>
+          <p id="cellModalText">Позже здесь будет описание этой клетки.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="board.js"></script>
+  </body>
+</html>

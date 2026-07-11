@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Казна игры</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="treasure-page">
+    <main class="app">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">настольная экономика</p>
+          <h1>Казна игры</h1>
+          <p class="subtitle">
+            Выдавайте и списывайте деньги, следите за балансами и историей игры.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="ghost-button link-button" href="index.html">На главную</a>
+          <button id="resetGame" class="ghost-button" type="button">Сбросить игру</button>
+        </div>
+      </section>
+
+      <section id="adminContent" class="layout">
+        <aside class="panel players-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">игроки</p>
+              <h2>Баланс</h2>
+            </div>
+          </div>
+
+          <div id="playersList" class="players-list"></div>
+
+          <a class="board-link" href="board.html">
+            <span>Игровое поле</span>
+            <small>Перейти к карте</small>
+          </a>
+        </aside>
+
+        <section class="content">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">деньги</p>
+                <h2>Выдать или списать</h2>
+              </div>
+            </div>
+
+            <form id="moneyForm" class="money-grid">
+              <label>
+                Игрок
+                <select id="moneyPlayerSelect"></select>
+              </label>
+              <label>
+                Сумма
+                <input id="moneyAmountInput" type="number" min="1" value="50" />
+              </label>
+              <label class="wide">
+                Причина
+                <input id="moneyReasonInput" type="text" placeholder="Прошел мини-игру" />
+              </label>
+              <div class="button-row wide">
+                <button type="submit" data-action="earn">Выдать</button>
+                <button type="submit" data-action="spend" class="danger-button">Списать</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">игры</p>
+                <h2>Текущая игра</h2>
+              </div>
+            </div>
+
+            <form id="gameForm" class="game-form">
+              <label>
+                Игрок
+                <select id="gamePlayerSelect"></select>
+              </label>
+              <label>
+                Название игры
+                <span class="game-search">
+                  <input id="gameTitleInput" type="text" autocomplete="off" placeholder="Например, Portal 2" />
+                  <span id="gameSearchResults" class="game-search-results" hidden></span>
+                </span>
+              </label>
+              <article id="selectedGameCard" class="selected-game-card wide" hidden></article>
+              <div class="button-row wide">
+                <button type="submit">Назначить текущую</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">история</p>
+                <h2>Последние события</h2>
+              </div>
+              <button id="clearLog" class="ghost-button" type="button">Очистить</button>
+            </div>
+            <div id="logList" class="log-list"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <template id="playerTemplate">
+      <article class="player-card">
+        <div>
+          <h3></h3>
+          <p class="inventory"></p>
+          <a class="profile-link" href="#">Открыть профиль</a>
+        </div>
+        <strong></strong>
+      </article>
+    </template>
+
+    <script src="treasury.js"></script>
+  </body>
+</html>
