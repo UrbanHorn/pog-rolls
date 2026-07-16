@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Казино — POG Rolls</title>
+    <style>
+      html,
+      body {
+        background: #080512;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="treasure-page">
+    <main class="app casino-page">
+      <header class="hero casino-header">
+        <div>
+          <p class="eyebrow">Игровой зал</p>
+          <h1>Казино</h1>
+        </div>
+        <nav class="hero-actions" aria-label="Навигация казино">
+          <a class="link-button casino-back-link" href="index.html">Главное меню</a>
+        </nav>
+      </header>
+
+      <section class="casino-showcase" aria-label="Игровой автомат POG Rolls">
+        <div class="casino-machine">
+          <img
+            class="casino-machine-image"
+            src="assets/casino-machine.png"
+            alt="Игровой автомат POG Rolls"
+          />
+          <button
+            class="coin-slot-button"
+            type="button"
+            aria-label="Вставить монетку"
+            title="Вставить монетку"
+          ></button>
+          <img
+            class="casino-start-pressed"
+            src="assets/casino-start-pressed.png"
+            alt=""
+            aria-hidden="true"
+            hidden
+          />
+          <button
+            class="casino-start-button"
+            type="button"
+            aria-label="Запустить игровой автомат"
+            title="Запустить игровой автомат"
+            disabled
+          ></button>
+          <p class="casino-status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+    <script src="casino.js"></script>
+  </body>
+</html>

@@ -1807,6 +1807,141 @@ label {
   --avatar-color: #302a20;
 }
 
+.casino-home-card {
+  --avatar-color: #701d18;
+}
+
+.casino-page {
+  min-height: 100vh;
+  width: min(1400px, calc(100% - 2rem));
+}
+
+.casino-header {
+  align-items: center;
+  width: min(1180px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.casino-back-link {
+  border: 1px solid rgba(199, 125, 255, 0.45);
+  background: rgba(18, 13, 30, 0.82);
+  color: #fff;
+}
+
+.casino-back-link:hover {
+  border-color: rgba(199, 125, 255, 0.8);
+  background: rgba(31, 20, 54, 0.92);
+}
+
+.casino-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1400px);
+  margin: 2rem auto 0;
+}
+
+.casino-machine {
+  position: relative;
+  width: min(100%, 96vh, 1226.667px);
+}
+
+.casino-machine-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.coin-slot-button {
+  position: absolute;
+  top: 47.238%;
+  left: 75.276%;
+  width: 3.108%;
+  height: 8.748%;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: url("assets/coin-cursor.png") 26 39, pointer;
+  padding: 0;
+  opacity: 1;
+}
+
+.coin-slot-button:hover {
+  background: transparent;
+  transform: none;
+}
+
+.coin-slot-button:focus-visible {
+  outline: 2px solid #f0b429;
+  outline-offset: 2px;
+}
+
+.coin-slot-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.casino-start-pressed,
+.casino-start-button {
+  position: absolute;
+  top: 75.691%;
+  left: 23.204%;
+  width: 15.815%;
+  height: 13.812%;
+}
+
+.casino-start-pressed {
+  z-index: 2;
+  display: block;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.casino-start-pressed[hidden] {
+  display: none;
+}
+
+.casino-start-button {
+  z-index: 3;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+}
+
+.casino-start-button:hover {
+  background: transparent;
+  transform: none;
+}
+
+.casino-start-button:focus-visible {
+  outline: 2px solid #f0b429;
+  outline-offset: 2px;
+}
+
+.casino-start-button:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.casino-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .players-list,
 .shop-list,
 .prize-list,
