@@ -4,35 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Игровое поле</title>
-    <style>
-      html,
-      body {
-        background: #07111b;
-      }
-    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="board-body">
     <main class="board-page">
-      <a class="board-back-button" href="index.html">Назад к казне</a>
+      <a class="board-back-button" href="index.html">← Главная</a>
       <section class="game-board-panel" aria-label="Карта игры">
+        <aside class="board-players" aria-label="Участники">
+          <nav class="board-player-list">
+            <a class="board-player-badge board-player-1" href="player-1.html" data-player-id="player-1">
+              <span class="board-player-number" aria-hidden="true"></span>
+              <strong>Werd</strong>
+              <span class="board-player-gold" aria-label="Золото">—</span>
+              <span class="board-player-body">
+                <span class="board-player-inventory" aria-label="Инвентарь Werd"></span>
+              </span>
+            </a>
+            <a class="board-player-badge board-player-2" href="player-2.html" data-player-id="player-2">
+              <span class="board-player-number" aria-hidden="true"></span>
+              <strong>Wiki</strong>
+              <span class="board-player-gold" aria-label="Золото">—</span>
+              <span class="board-player-body">
+                <span class="board-player-inventory" aria-label="Инвентарь Wiki"></span>
+              </span>
+            </a>
+            <a class="board-player-badge board-player-3" href="player-3.html" data-player-id="player-3">
+              <span class="board-player-number" aria-hidden="true"></span>
+              <strong>Kamatori</strong>
+              <span class="board-player-gold" aria-label="Золото">—</span>
+              <span class="board-player-body">
+                <span class="board-player-inventory" aria-label="Инвентарь Kamatori"></span>
+              </span>
+            </a>
+            <a class="board-player-badge board-player-4" href="player-4.html" data-player-id="player-4">
+              <span class="board-player-number" aria-hidden="true"></span>
+              <strong>𝓡𝓾𝓫𝔂𝓖𝓾𝓷</strong>
+              <span class="board-player-gold" aria-label="Золото">—</span>
+              <span class="board-player-body">
+                <span class="board-player-inventory" aria-label="Инвентарь RubyGun"></span>
+              </span>
+            </a>
+            <a class="board-player-badge board-player-5" href="player-5.html" data-player-id="player-5">
+              <span class="board-player-number" aria-hidden="true"></span>
+              <strong>17400</strong>
+              <span class="board-player-gold" aria-label="Золото">—</span>
+              <span class="board-player-body">
+                <span class="board-player-inventory" aria-label="Инвентарь 17400"></span>
+              </span>
+            </a>
+          </nav>
+          <div class="board-dice-controls">
+            <button id="boardRollButton" class="board-roll-button" type="button" aria-label="Бросок кубика" title="Бросок кубика" aria-pressed="false">
+              <span aria-hidden="true">🎲</span>
+            </button>
+            <button id="boardDoubleDiceButton" class="board-double-dice-button" type="button" aria-label="Двойной кубик" title="Двойной кубик" aria-pressed="false">
+              <span aria-hidden="true">×2</span>
+              <span class="board-double-dice-status" aria-hidden="true"></span>
+            </button>
+          </div>
+        </aside>
         <div id="boardStage" class="board-stage">
           <img class="board-map" src="assets/pog_rolls_map_loop.webp" alt="Карта игрового поля" />
-          <canvas id="cellLayer" class="cell-layer" aria-label="Клетки игрового поля"></canvas>
+          <canvas id="cellLayer" class="cell-layer" aria-label="Секторы игрового поля"></canvas>
           <div id="pieceLayer" class="piece-layer" aria-label="Фигурки игроков"></div>
+          <div id="mapDiceLayer" class="map-dice-layer" aria-label="Бросок кубиков на игровой карте" hidden></div>
         </div>
       </section>
 
       <div id="cellModal" class="cell-modal" hidden>
         <div class="cell-modal-card" role="dialog" aria-modal="true" aria-labelledby="cellModalTitle">
+          <button id="previousCell" class="cell-modal-nav cell-modal-nav-previous" type="button" aria-label="Предыдущий сектор">‹</button>
+          <button id="nextCell" class="cell-modal-nav cell-modal-nav-next" type="button" aria-label="Следующий сектор">›</button>
           <button id="closeCellModal" class="cell-modal-close" type="button" aria-label="Закрыть">×</button>
-          <p class="eyebrow">информация</p>
-          <h2 id="cellModalTitle">Клетка</h2>
-          <p id="cellModalText">Позже здесь будет описание этой клетки.</p>
+          <h2 id="cellModalTitle">Сектор</h2>
+          <p id="cellModalText">Позже здесь будет описание этого сектора.</p>
         </div>
+      </div>
+
+      <div id="diceModal" class="dice-modal" hidden>
+        <section id="diceModalCard" class="dice-modal-card" role="dialog" aria-modal="true" aria-label="Бросок кубика">
+          <div id="diceDragHandle" class="dice-drag-handle" aria-label="Переместить окно" title="Перетащите окно"></div>
+          <button id="closeDiceModal" class="dice-modal-close" type="button" aria-label="Закрыть">×</button>
+          <div class="dice-scene" aria-hidden="true">
+            <div id="diceCube" class="dice-cube"></div>
+            <p id="diceResult" class="dice-result" aria-live="polite"></p>
+            <p id="diceBreakdown" class="dice-breakdown" aria-live="polite"></p>
+          </div>
+          <label class="dice-double-toggle">
+            <input id="doubleDiceToggle" type="checkbox">
+            <span class="dice-double-check" aria-hidden="true"></span>
+            <span>Двойной кубик</span>
+          </label>
+        </section>
       </div>
     </main>
 
-    <script src="board.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="board.js"></script>
   </body>
 </html>
